@@ -1,0 +1,15 @@
+{
+  "name": "noventra-school-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"pnpm run dev:backend\" \"pnpm run dev:frontend\"",
+    "dev:frontend": "pnpm --prefix frontend run dev",
+    "dev:backend": "pnpm --prefix backend run dev",
+    "build": "pnpm --prefix backend run build && pnpm --prefix frontend run build",
+    "install:all": "pnpm install && pnpm --prefix frontend install && pnpm --prefix backend install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
